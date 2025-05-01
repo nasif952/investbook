@@ -1,0 +1,229 @@
+{
+  "type": "object",
+  "x-bsonType": "object",
+  "required": [
+    "_id",
+    "__v",
+    "createdAt",
+    "email",
+    "lastLogin",
+    "password",
+    "profile",
+    "role",
+    "updatedAt"
+  ],
+  "properties": {
+    "_id": {
+      "$ref": "#/$defs/ObjectId",
+      "x-bsonType": "objectId",
+      "x-metadata": {
+        "hasDuplicates": false,
+        "probability": 1,
+        "count": 5
+      },
+      "x-sampleValues": [
+        "680ba46a0f78fc4feea94e55",
+        "680bdf0eef797033fb997a86",
+        "680b73ed12ff95985185db15",
+        "680b72b912ff95985185dae8",
+        "680bdecdef797033fb997a77"
+      ]
+    },
+    "__v": {
+      "type": "integer",
+      "x-bsonType": "int",
+      "x-metadata": {
+        "hasDuplicates": true,
+        "probability": 1,
+        "count": 5
+      },
+      "x-sampleValues": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "createdAt": {
+      "$ref": "#/$defs/Date",
+      "x-bsonType": "date",
+      "x-metadata": {
+        "hasDuplicates": false,
+        "probability": 1,
+        "count": 5
+      },
+      "x-sampleValues": [
+        "2025-04-25T15:04:10.148Z",
+        "2025-04-25T19:14:22.714Z",
+        "2025-04-25T11:37:17.983Z",
+        "2025-04-25T11:32:09.981Z",
+        "2025-04-25T19:13:17.974Z"
+      ]
+    },
+    "email": {
+      "type": "string",
+      "x-bsonType": "string",
+      "x-metadata": {
+        "hasDuplicates": false,
+        "probability": 1,
+        "count": 5
+      },
+      "x-sampleValues": [
+        "test2@gmail.com",
+        "test4@gmail.com",
+        "admin@example.com",
+        "nasif.ahmed95@gmail.com",
+        "test3@gmail.com"
+      ]
+    },
+    "lastLogin": {
+      "$ref": "#/$defs/Date",
+      "x-bsonType": "date",
+      "x-metadata": {
+        "hasDuplicates": false,
+        "probability": 1,
+        "count": 5
+      },
+      "x-sampleValues": [
+        "2025-04-25T15:49:33.532Z",
+        "2025-04-29T16:07:44.060Z",
+        "2025-04-30T08:29:52.807Z",
+        "2025-04-30T08:25:16.414Z",
+        "2025-04-25T19:13:17.973Z"
+      ]
+    },
+    "password": {
+      "type": "string",
+      "x-bsonType": "string",
+      "x-metadata": {
+        "hasDuplicates": false,
+        "probability": 1,
+        "count": 5
+      },
+      "x-sampleValues": [
+        "$2a$10$p4N2sl96MHjQrPU8fXmTr.RxZRRoT0oN6J5DqPZfaJOyXpkTS59u.",
+        "$2a$10$Y0vX0KpgpKcTRh40oP2fQukwOizqZqGG9tYYYwjLwKdfAI9DqkJ/2",
+        "$2a$10$rjV8VQiWK/C9ib3jeE8jye.XnXWQ6ykZgWMgeEITNnIui2oZqel9.",
+        "$2a$10$tUyaSenV8/m0F7.nGsml6OE6/zXnYpaBU0ZnNFDtIQjVWUpgWUY5O",
+        "$2a$10$tdR/HejnNRmMOxCcJH4xr.aAHx26fcl7yQ69K7nCtvGuAMrl5aVuK"
+      ]
+    },
+    "profile": {
+      "type": "object",
+      "x-bsonType": "object",
+      "x-metadata": {
+        "hasDuplicates": false,
+        "probability": 1,
+        "count": 5
+      },
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "x-bsonType": "string",
+          "x-metadata": {
+            "hasDuplicates": false,
+            "probability": 1,
+            "count": 5
+          },
+          "x-sampleValues": [
+            "test2",
+            "test4",
+            "Admin User",
+            "test1",
+            "23"
+          ]
+        },
+        "phone": {
+          "type": "string",
+          "x-bsonType": "string",
+          "x-metadata": {
+            "hasDuplicates": true,
+            "probability": 0.4,
+            "count": 2
+          },
+          "x-sampleValues": [
+            "22332",
+            "231"
+          ]
+        },
+        "position": {
+          "type": "string",
+          "x-bsonType": "string",
+          "x-metadata": {
+            "hasDuplicates": true,
+            "probability": 0.4,
+            "count": 2
+          },
+          "x-sampleValues": [
+            "Sale",
+            "aasd"
+          ]
+        }
+      }
+    },
+    "role": {
+      "type": "string",
+      "x-bsonType": "string",
+      "x-metadata": {
+        "hasDuplicates": true,
+        "probability": 1,
+        "count": 5
+      },
+      "x-sampleValues": [
+        "startup",
+        "sales",
+        "admin",
+        "startup",
+        "startup"
+      ]
+    },
+    "updatedAt": {
+      "$ref": "#/$defs/Date",
+      "x-bsonType": "date",
+      "x-metadata": {
+        "hasDuplicates": false,
+        "probability": 1,
+        "count": 5
+      },
+      "x-sampleValues": [
+        "2025-04-25T15:49:33.536Z",
+        "2025-04-29T16:07:44.061Z",
+        "2025-04-30T08:29:52.807Z",
+        "2025-04-30T08:25:16.418Z",
+        "2025-04-25T19:13:17.974Z"
+      ]
+    }
+  },
+  "$defs": {
+    "ObjectId": {
+      "type": "object",
+      "properties": {
+        "$oid": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{24}$"
+        }
+      },
+      "required": [
+        "$oid"
+      ],
+      "additionalProperties": false
+    },
+    "Date": {
+      "type": "object",
+      "properties": {
+        "$date": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "$date"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

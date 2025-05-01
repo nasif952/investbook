@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Elements -->
+  <circle cx="400" cy="300" r="250" fill="#E8F0FE" />
+  <circle cx="400" cy="300" r="200" fill="#C5D9F8" />
+  
+  <!-- Rocket -->
+  <g transform="translate(350, 200) rotate(45)">
+    <path d="M40,0 L80,120 L0,120 Z" fill="#2563EB" />
+    <rect x="30" y="120" width="20" height="40" fill="#1E40AF" />
+    <circle cx="40" cy="50" r="20" fill="#60A5FA" />
+  </g>
+  
+  <!-- Stars -->
+  <circle cx="200" cy="150" r="4" fill="#4F46E5" />
+  <circle cx="600" cy="400" r="4" fill="#4F46E5" />
+  <circle cx="500" cy="200" r="4" fill="#4F46E5" />
+  <circle cx="300" cy="450" r="4" fill="#4F46E5" />
+  
+  <!-- Abstract Shapes -->
+  <path d="M600,250 Q650,300 600,350" stroke="#818CF8" stroke-width="4" fill="none" />
+  <path d="M200,250 Q150,300 200,350" stroke="#818CF8" stroke-width="4" fill="none" />
+  
+  <!-- Growth Chart -->
+  <path d="M650,400 L700,350 L750,300" stroke="#2563EB" stroke-width="4" fill="none" />
+  
+  <!-- Connection Lines -->
+  <line x1="200" y1="200" x2="250" y2="250" stroke="#C5D9F8" stroke-width="2" />
+  <line x1="600" y1="200" x2="550" y2="250" stroke="#C5D9F8" stroke-width="2" />
+</svg> 
