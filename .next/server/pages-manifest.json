@@ -1,0 +1,17 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  "/login": "pages/login.js",
+  "/404": "pages/404.js",
+  "/dashboard": "pages/dashboard.js",
+  "/api/startups": "pages/api/startups.js",
+  "/startup/[id]": "pages/startup/[id].js",
+  "/api/startups/[id]": "pages/api/startups/[id].js",
+  "/api/evaluations/startup/[startupId]": "pages/api/evaluations/startup/[startupId].js",
+  "/api/evaluations/[id]": "pages/api/evaluations/[id].js",
+  "/evaluations/[evaluationId]": "pages/evaluations/[evaluationId].js",
+  "/api/evaluations/criteria": "pages/api/evaluations/criteria.js"
+}
