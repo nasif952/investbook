@@ -431,7 +431,7 @@ const RegisterPage = () => {
         );
       case 2:
         return (
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -440,74 +440,82 @@ const RegisterPage = () => {
             <Typography variant="h5" sx={{ mb: 3, fontWeight: 600 }}>
               Select Your Role
             </Typography>
-            
+
             <Box sx={{ mb: 4 }}>
               <Typography variant="body1" sx={{ mb: 2, color: 'text.secondary' }}>
                 Please select your role in the platform:
               </Typography>
-              
+
               <motion.div variants={itemVariants}>
-                <Grid container spacing={2}>
+                <Grid container spacing={3}>
+                  {/* Startup Founder Role Card */}
                   <Grid item xs={12} sm={6}>
-                    <Card 
-                      elevation={formData.role === 'startup' ? 4 : 1}
-                      onClick={() => setFormData(prev => ({...prev, role: 'startup'}))}
+                    <Card
+                      variant="outlined"
+                      onClick={() => setFormData({ ...formData, role: 'startup' })}
                       sx={{
-                        p: 2,
                         cursor: 'pointer',
-                        borderRadius: 2,
-                        border: `2px solid ${formData.role === 'startup' ? theme.palette.primary.main : 'transparent'}`,
-                        transition: 'all 0.2s',
-                        transform: formData.role === 'startup' ? 'translateY(-4px)' : 'none',
+                        p: 2.5,
+                        borderRadius: 3,
+                        transition: 'all 0.3s',
+                        border: formData.role === 'startup'
+                          ? `2px solid ${theme.palette.primary.main}`
+                          : `1px solid ${theme.palette.divider}`,
+                        bgcolor: formData.role === 'startup'
+                          ? theme.palette.action.selected
+                          : 'transparent',
                         '&:hover': {
                           boxShadow: theme.shadows[4],
-                          transform: 'translateY(-4px)',
-                        }
+                          borderColor: theme.palette.primary.light,
+                        },
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        textAlign: 'center',
+                        height: '100%' // Ensure cards have same height
                       }}
                     >
-                      <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                        <BusinessIcon 
-                          color="primary" 
-                          fontSize="large" 
-                          sx={{ mr: 1 }}
-                        />
-                        <Typography variant="h6" fontWeight={600}>
-                          Startup Founder
-                        </Typography>
-                      </Box>
+                      <BusinessIcon color="primary" sx={{ fontSize: 40, mb: 1.5 }} />
+                      <Typography variant="h6" fontWeight={500} gutterBottom>
+                        Startup Founder
+                      </Typography>
                       <Typography variant="body2" color="text.secondary">
                         Register as a startup founder to showcase your business and get evaluated by our experts.
                       </Typography>
                     </Card>
                   </Grid>
-                  
+
+                  {/* Sales Representative Role Card */}
                   <Grid item xs={12} sm={6}>
-                    <Card 
-                      elevation={formData.role === 'sales' ? 4 : 1}
-                      onClick={() => setFormData(prev => ({...prev, role: 'sales'}))}
+                    <Card
+                      variant="outlined"
+                      onClick={() => setFormData({ ...formData, role: 'sales' })}
                       sx={{
-                        p: 2,
                         cursor: 'pointer',
-                        borderRadius: 2,
-                        border: `2px solid ${formData.role === 'sales' ? theme.palette.primary.main : 'transparent'}`,
-                        transition: 'all 0.2s',
-                        transform: formData.role === 'sales' ? 'translateY(-4px)' : 'none',
-                        '&:hover': {
+                        p: 2.5,
+                        borderRadius: 3,
+                        transition: 'all 0.3s',
+                        border: formData.role === 'sales'
+                          ? `2px solid ${theme.palette.primary.main}`
+                          : `1px solid ${theme.palette.divider}`,
+                        bgcolor: formData.role === 'sales'
+                          ? theme.palette.action.selected
+                          : 'transparent',
+                         '&:hover': {
                           boxShadow: theme.shadows[4],
-                          transform: 'translateY(-4px)',
-                        }
+                          borderColor: theme.palette.primary.light,
+                        },
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        textAlign: 'center',
+                        height: '100%' // Ensure cards have same height
                       }}
                     >
-                      <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                        <PersonIcon 
-                          color="primary" 
-                          fontSize="large" 
-                          sx={{ mr: 1 }}
-                        />
-                        <Typography variant="h6" fontWeight={600}>
-                          Sales Representative
-                        </Typography>
-                      </Box>
+                      <AccountCircleIcon color="primary" sx={{ fontSize: 40, mb: 1.5 }} />
+                      <Typography variant="h6" fontWeight={500} gutterBottom>
+                        Sales Representative
+                      </Typography>
                       <Typography variant="body2" color="text.secondary">
                         Register as a sales representative to evaluate startups and provide professional feedback.
                       </Typography>
@@ -515,13 +523,12 @@ const RegisterPage = () => {
                   </Grid>
                 </Grid>
               </motion.div>
-            </Box>
-            
-            <motion.div variants={itemVariants}>
-              <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                By registering, you agree to our Terms of Service and Privacy Policy. Your selected role determines your access level within the platform.
+              
+              <Typography variant="caption" display="block" sx={{ mt: 3, color: 'text.secondary', textAlign: 'center' }}>
+                By registering, you agree to our <MuiLink component={Link} href="/terms-of-service" target="_blank" rel="noopener noreferrer">Terms of Service</MuiLink> and <MuiLink component={Link} href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</MuiLink>. Your selected role determines your access level within the platform.
               </Typography>
-            </motion.div>
+              
+            </Box>
           </motion.div>
         );
       default:
@@ -620,7 +627,8 @@ const RegisterPage = () => {
                 
                 {activeStep === steps.length - 1 ? (
                   <Button
-                    type="submit"
+                    type="button"
+                    onClick={handleSubmit}
                     variant="contained"
                     disabled={loading}
                     startIcon={<HowToRegIcon />}
